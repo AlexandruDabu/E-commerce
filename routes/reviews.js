@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const query = require('../db/config')
+const sequelize = require('../db/config')
 
 const router = Router();
 
