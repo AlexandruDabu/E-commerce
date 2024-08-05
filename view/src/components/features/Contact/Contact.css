@@ -1,0 +1,115 @@
+.contactBody {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;    /* Center children horizontally */
+    width: 100%;            /* Full width */
+    padding: 20px;          /* Padding around content */
+}
+.headerContact h1, .formContact h1 {
+    text-align: center;  
+}
+.headerContact h1{
+    font-size: 48px;
+}
+.headerContact, .faqContact, .formContact {
+    width: 100%;            /* Full width for each section */
+    max-width: 1200px;       /* Max width to keep content from being too wide */
+    margin: 20px 0;         /* Margin between sections */
+}
+.formContact{
+    align-items: center;
+    text-align: center;
+}
+.formContact form{
+    width: 75%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-group-bigContact{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.form-group-bigContact input{
+    width: 75%;
+}
+.formContact textarea {
+    width: 100%;           /* Full width of the parent container */
+    padding: 10px;         /* Space inside the textarea */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px;    /* Rounded corners */
+    font-size: 16px;       /* Larger font size for readability */
+    line-height: 1.5;      /* Better line spacing */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    resize:none;      /* Allow vertical resizing only */
+    transition: border-color 0.3s ease; /* Smooth transition for border color on focus */
+}
+
+textarea:focus {
+    border-color: #888; /* Change border color on focus */
+    outline: none;         /* Remove default outline */
+}
+
+.form-group-contact{
+    margin: 1rem 0;
+    width: 100%;
+}
+.faqContact {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.faqQuestions{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.faqDataContact{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.faqDataContact a{
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s
+}
+.faqDataContact a:hover{
+    color: #999
+}
+.faqDataContact p{
+    font-weight: bold;
+}
+.faqMiniContact{
+    text-align: center;
+    margin: .5rem 0;
+}
+.faqQuestion{
+    background-color: #fff;
+    color: rgba(0,0,0,0.8);
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border:none;
+    outline: none;
+    transition: 0.3s;
+    font-weight: bold;
+    display:flex;
+    justify-content: space-between;
+    border-radius: 16px;
+}
+.active,
+.faqQuestion:hover{
+    background-color: #f1f7f5;
+}
+
+.panel{
+    padding: 0 18px;
+    background-color: #fff;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f7f5;
+    padding: 0 2rem 2.5rem 2rem;
+}

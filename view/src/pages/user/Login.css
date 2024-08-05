@@ -1,0 +1,54 @@
+.mainLogin{
+    background-color: #f4f4f4;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    padding: 2rem;
+    background-color: #f4f4f4; /* Light grey background for a softer look */
+    border-radius: 12px;
+    text-align: center;
+    margin: 2rem auto; /* Center the form with some top and bottom margin */
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+h1 {
+    margin-bottom: 1rem; /* Add some space below the heading */
+    font-size: 1.5rem; /* Increase font size for better readability */
+    color: #333; /* Dark grey color for the heading text */
+}
+
+.loginData {
+    margin: 1rem 0;
+    display: grid;
+}
+label{
+    text-align: start;
+}
+input {
+    padding: 0.75rem; /* Add padding inside input fields */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 8px; /* Slightly rounded corners */
+    font-size: 1rem; 
+}
+
+.loginButton {
+    margin: 1rem 0;
+    width: 50%; /* Full width button */
+    padding: 0.75rem; /* Add padding inside the button */
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff; /* Blue background */
+    color: white;
+    font-size: 1rem; /* Consistent font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.loginButton:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+}

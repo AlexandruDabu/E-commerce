@@ -1,0 +1,10 @@
+main {
+    grid-area: main;
+    background-color: aqua;
+    padding: 2rem;
+    display:flex;
+
+}
+.mainHeader{
+
+}

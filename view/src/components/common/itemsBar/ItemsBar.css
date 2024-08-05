@@ -1,0 +1,19 @@
+.itemsBar{
+    grid-area: itemsBar;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.ul-itemsBar{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+.li-itemsBar{
+    margin: 0 1rem;
+}
+.ul-contact{
+    justify-content: end;
+    display:flex;
+    list-style-type: none;
+}

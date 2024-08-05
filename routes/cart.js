@@ -4,21 +4,11 @@ const { authJWT } = require('../JWT-config');
 const CartItems = require('../models/CartItems');
 const Order = require('../models/Orders');
 const OrderDetails = require('../models/OrderDetails');
+const { readById } = require('../controller/cart');
 
 const router = Router();
 
-router.get('/',authJWT, async (req,res) => {
-    try{
-        const id = req.user.userId;
-        const cart = await Cart.findOne({where : {user_id : id}})
-        if(cart){
-            res.status(200).json({message: 'Your cart', cart: cart});
-        }
-        res.status(404).json({message: 'This user doesnt have any cart'})
-    }catch(err){
-            console.log(err)
-        }
-    })
+router.get('/:id',authJWT, readById);
 
 router.post('/create', authJWT, async (req,res) => {
     try{

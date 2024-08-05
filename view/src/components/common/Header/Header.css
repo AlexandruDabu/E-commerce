@@ -1,0 +1,76 @@
+header{
+    grid-area: header;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Dropdown Menu Container */
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Button */
+.dropdown-btn {
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark grey text */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #666; /* Cool grey border */
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+    color: #000000; /* Darker text on hover */
+    border-color: #aaaaaa; /* Darker grey border on hover */
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 1;
+    
+    /* Start hidden */
+    opacity: 0;
+    visibility: hidden;
+    
+    /* Transition properties */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Show the dropdown content on button hover with a delay */
+.dropdown-menu:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Change link color on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Optional: Dropdown positioning */
+.dropdown-content {
+    top: 100%; /* Position below the button */
+    left: 0;
+}
