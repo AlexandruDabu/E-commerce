@@ -6,7 +6,7 @@ export default function ItemsBar(){
         <nav>
             <ul className='ul-itemsBar'>
                 <li className='li-itemsBar'>
-                    <Link to='/'>Products</Link>
+                    <Link to='/category'>Products</Link>
                 </li>
                 <li className='li-itemsBar'>
                     <Link to='/'>What's New</Link>

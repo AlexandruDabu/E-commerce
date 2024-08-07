@@ -1,76 +1,132 @@
 header{
     grid-area: header;
-    background-color: red;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-/* Dropdown Menu Container */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    background-color: #2d2d2d; /* Dark background to match navbar */
+    border-radius: 25px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    background-color: #2d2d2d; /* Match the dark background */
+    color: #fff; /* White text */
+    font-size: 16px;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    color: #bfbfbf; /* Light gray placeholder text */
+}
+
+.search-bar .buttonForTerm {
+    background-color: #2d2d2d; /* Blue background for the button */
+    border: none;
+    border-radius: 0 25px 25px 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.search-bar .buttonForTerm i {
+    color: #fff; /* White icon */
+    font-size: 18px;
+}
+
+.search-bar input:focus {
+    border-color: #333; /* Focus effect on input */
+}
+.search-bar .buttonForTerm:hover{
+    background-color: #444;
+}
+
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .dropdown-menu {
     position: relative;
     display: inline-block;
 }
 
-/* Dropdown Button */
 .dropdown-btn {
-    background-color: #ffffff; /* White background */
-    color: #333333; /* Dark grey text */
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 1px solid #666; /* Cool grey border */
-    border-radius: 16px;
+    background-color: #444;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.dropdown-btn:hover {
-    background-color: #f0f0f0; /* Light grey background on hover */
-    color: #000000; /* Darker text on hover */
-    border-color: #aaaaaa; /* Darker grey border on hover */
-}
-
-/* Dropdown Content */
 .dropdown-content {
-    display: block;
+    display: none;
     position: absolute;
-    background-color: white;
+    background-color: #fff;
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    border-radius: 4px;
     z-index: 1;
-    
-    /* Start hidden */
-    opacity: 0;
-    visibility: hidden;
-    
-    /* Transition properties */
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
-/* Show the dropdown content on button hover with a delay */
-.dropdown-menu:hover .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Links inside the dropdown */
 .dropdown-content a {
     color: black;
-    padding: 8px 12px;
+    padding: 12px 16px;
     text-decoration: none;
     display: block;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
 }
 
-/* Change link color on hover */
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
 
-/* Optional: Dropdown positioning */
-.dropdown-content {
-    top: 100%; /* Position below the button */
-    left: 0;
+.dropdown-menu:hover .dropdown-content {
+    display: block;
+}
+
+.cart-btn {
+    background-color: #008cba;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart-btn:hover,
+.dropdown-btn:hover {
+    background-color: #005f8a;
 }

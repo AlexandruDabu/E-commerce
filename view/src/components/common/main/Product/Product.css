@@ -1,0 +1,218 @@
+/* Main container for the product page */
+.product-page {
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+    background-color: #f9f9f9;
+}
+
+/* Product image styling */
+.product-image {
+    flex: 1 1 40%;
+    max-width: 500px;
+    margin-right: 20px;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Product details section */
+.product-details {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-name {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.product-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.product-stock {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #28a745;
+}
+
+/* Quantity controls */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.quantity-controls button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.quantity-controls button:hover {
+    background-color: #0056b3;
+}
+
+.quantity-controls span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Add to cart button */
+.add-to-cart-btn {
+    background-color: #ff6f00; /* Orange color */
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    width: 40%;
+}
+
+.add-to-cart-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #e65c00;
+}
+
+/* Add to favorites button */
+.add-to-favorites-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 40%;
+}
+
+.add-to-favorites-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Product reviews section */
+.product-reviews {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.product-reviews h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.review {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.review-author {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.review-content {
+    color: #555;
+}
+.product-comments {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.product-comments h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product-comments textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.product-comments textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.product-comments .submit-comment-btn {
+    background-color: #ff6f00; /* Orange color */
+    color: white;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.product-comments .end-button{
+    justify-content: end;
+    display:flex
+}
+
+.product-comments .submit-comment-btn:hover {
+    background-color: #e65c00;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .product-page {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .product-details {
+        text-align: center;
+    }
+}

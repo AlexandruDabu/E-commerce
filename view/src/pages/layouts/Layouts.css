@@ -1,0 +1,25 @@
+.mainLayout{
+    display: grid;
+    gap: 4px;
+    grid-template-rows: 3.5rem 3rem auto auto;
+    grid-template-columns: 1fr 4fr; /* Adjust the columns to create two columns for sidebar and main */
+    grid-template-areas: 
+      'header header'
+      'itemsBar itemsBar'
+      'sidebar main' /* Define sidebar and main content in the same row */
+      'footer footer'; /* Span footer across both columns */
+    height: 100vh;
+    width: 100vw;
+  }
+  .productLayout{
+    display: grid;
+    gap: 4px;
+    grid-template-rows: 3.5rem 3rem auto auto;
+    grid-template-areas:
+    'header header'
+    'itemsBar itemsBar'
+    'main main'
+    'footer footer';
+    height: 100vh;
+    width: 100vw;
+  }

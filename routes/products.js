@@ -9,9 +9,9 @@ const router = Router();
 
 router.get('/', products)
 
-router.get('/:category', productByCategoryName)
+router.get('/category/:category', productByCategoryName)
 
-router.get('/:id',authJWT, productById)
+router.get('/:id', productById)
 
 router.post('/create',authJWT, createProduct);
 

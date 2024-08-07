@@ -1,4 +1,97 @@
 footer{
     grid-area: footer;
-    background-color: black;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+
+}
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #f8f8f8;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.footer-section.social-media ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-section.newsletter form {
+    display: flex;
+}
+
+.footer-section.newsletter input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    margin-right: -1px;
+}
+
+.footer-section.newsletter button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-section.newsletter button:hover {
+    background-color: #0056b3;
+}
+
+.footer-section.payment-methods ul {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-section.payment-methods ul li img {
+    width: 50px;
+    height: auto;
+}
+
+.footer-copyright {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    color: #bbb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 }

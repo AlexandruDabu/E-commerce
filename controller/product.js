@@ -1,8 +1,15 @@
-const { getProducts, getProductById, createProduct, updateProduct, deleteProduct, getProductByCategory } = require("../models/Interfaces/product");
+const { Op } = require("sequelize");
+const { getProducts, getProductById, createProduct, updateProduct, deleteProduct, getProductByCategory, getProductsByRegex } = require("../models/Interfaces/product");
 
 exports.products = async (req,res) => {
     try{
-        const products = await getProducts();
+        const {search} = req.query;
+        const condition = search ? {
+            name: {
+                [Op.iLike]: `%${search}%`
+            }
+        } : {}
+        const products = await getProducts(condition);
         if(!products){
             res.status(404).json({message: 'No products found'});
             return;

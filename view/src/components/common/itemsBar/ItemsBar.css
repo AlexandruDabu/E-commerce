@@ -1,19 +1,69 @@
 .itemsBar{
     grid-area: itemsBar;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.ul-itemsBar{
-    display:flex;
+    grid-template-columns: 1fr auto;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     align-items: center;
-    justify-content: center;
-    list-style-type: none;
+    justify-content: space-between;
 }
-.li-itemsBar{
-    margin: 0 1rem;
+
+/* Navigation styling */
+.itemsBar nav {
+    display: flex;
 }
-.ul-contact{
-    justify-content: end;
-    display:flex;
-    list-style-type: none;
+
+/* Styling for unordered lists in the ItemsBar */
+.ul-itemsBar, .ul-contact {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* List items styling */
+.li-itemsBar {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Links styling */
+.li-itemsBar a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for links */
+.li-itemsBar a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .itemsBar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ul-itemsBar, .ul-contact {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .li-itemsBar {
+        width: 100%;
+    }
+
+    .li-itemsBar a {
+        width: 100%;
+        text-align: center;
+    }
 }

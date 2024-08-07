@@ -1,8 +1,9 @@
+const { Op } = require("sequelize");
 const Category = require("../Category");
 const Product = require("../Products")
 
-const getProducts = async () =>{
-    return Product.findAll();
+const getProducts = async (condition) =>{
+    return Product.findAll({where: condition});
 }
 
 const getProductById = async(id) => {

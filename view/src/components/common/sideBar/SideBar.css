@@ -1,3 +1,63 @@
 aside{
     grid-area: sidebar;
+    width: 250px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Navigation within the sidebar */
+aside nav {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for the unordered list */
+aside nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+/* Styling for the list items */
+aside nav ul li {
+    margin-bottom: 10px;
+}
+
+/* Link styling */
+aside nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for links */
+aside nav ul li a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Active link styling (optional, if you want to show active links) */
+aside nav ul li a.active {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    aside {
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 10px;
+    }
+    
+    aside nav ul li a {
+        padding: 10px;
+        text-align: center;
+    }
 }
